@@ -156,7 +156,6 @@ img {
 
 .item {
     width: 210px;
-    height: 336px;
     border-radius: 4px;
     float: left;
     position: relative;
@@ -169,13 +168,13 @@ img {
     height: 168px;
 }
 
-.text>p:first-child {
+.title {
     font-size: 14px;
     line-height: 20px;
     color: #333;
 }
 
-.text>p:last-child {
+.type {
     font-size: 12px;
     color: #bbb;
     margin-bottom: 17px;
@@ -188,3 +187,68 @@ img {
     height: 75px;
 }
 
+.icon {
+    width: 178px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 使用选择器时文字和图片居中对齐 */
+.eye::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    background: url(./img/item4.jpg) no-repeat;
+    background-size: 100%;
+    margin-right: 5px;
+}
+
+.number::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    background: url(./img/item3.jpg) no-repeat;
+    background-size: 100%;
+    margin-right: 5px;
+}
+
+.praise::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    background: url(./img/item2.jpg) no-repeat;
+    background-size: 100%;
+    margin-right: 5px;
+}
+
+.icon {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.card-item {
+    height: 50px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left>a {
+    line-height: 24px;
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -67,8 +67,23 @@ export default class App extends Component {
               <div className="item">
                 <img src={[require("./img/item1.jpg")]} alt="" />
                 <div className="text">
-                  <p>THE MIST——Styleframe</p>
-                  <p>三维-其他三维</p>
+                  <p className="title">THE MIST——Styleframe</p>
+                  <p className="type">三维-其他三维</p>
+                  <div className="icon">
+                    <p className="eye">1318</p>
+                    <p className="number">9</p>
+                    <p className="praise">66</p>
+                  </div>
+                </div>
+                <div className="card-item">
+                  <span className="left">
+                    <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link">
+                      <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px' }} />
+                    </a>秋刀鱼设计
+                  </span>
+                  <span className="right">
+                    1天前
+                  </span>
                 </div>
               </div>
             </div>
