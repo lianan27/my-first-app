@@ -50,11 +50,11 @@ class App extends Component {
         <div className="content">
           <Banner />
           <div className="photo">
-            <img src={[require("./img/content1.jpg")]} alt="" onClick={()=>{window.location.href="https://www.zcool.com.cn"}}/>
-            <img src={[require("./img/content2.jpg")]} alt="" onClick={()=>{window.location.href="https://www.zcool.com.cn"}}/>
-            <img src={[require("./img/content3.jpg")]} alt="" onClick={()=>{window.location.href="https://www.zcool.com.cn"}}/>
-            <img src={[require("./img/content4.jpg")]} alt="" onClick={()=>{window.location.href="https://www.zcool.com.cn"}}/>
-            <img src={[require("./img/content5.jpg")]} alt="" onClick={()=>{window.location.href="https://www.zcool.com.cn"}}/>
+            <img src={[require("./img/content1.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
+            <img src={[require("./img/content2.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
+            <img src={[require("./img/content3.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
+            <img src={[require("./img/content4.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
+            <img src={[require("./img/content5.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
           </div>
           <div className="nav">
             <p>首页推荐</p>
@@ -63,7 +63,15 @@ class App extends Component {
         </div>
         <div className="details">
           <div className="matter">
-            123
+            <div className="box">
+              <div className="item">
+                <img src={[require("./img/item1.jpg")]} alt="" />
+                <div className="text">
+                  <p>THE MIST——Styleframe</p>
+                  <p>三维-其他三维</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>
