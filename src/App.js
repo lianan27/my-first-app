@@ -4,7 +4,7 @@ import { Menu } from 'antd';
 import Banner from './Banner.js';
 
 const { SubMenu } = Menu;
-class App extends Component {
+export default class App extends Component {
 
   state = {
     current: 'mail',
@@ -84,8 +84,5 @@ class App extends Component {
 // 正版素材：图片 视频 字体 音乐 创意专题 我要供图
 // 课程 ：免费直播 学习路径 正在热销 口碑好课
 // 版权保护: 著作权登记 区块链存证 维权服务 商标注册
-
-export default App;
-
 
 

@@ -9,9 +9,6 @@ ReactDOM.render(
   <div>
     <Page />
     <App />
-    
-    {/* <OuterClickExample />
-    <NameForm /> */}
   </div>
   ,document.getElementById('root')
 )
