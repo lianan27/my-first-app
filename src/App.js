@@ -78,8 +78,8 @@ export default class App extends Component {
                 <div className="card-item">
                   <span className="left">
                     <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link">
-                      <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px' }} />
-                    </a>秋刀鱼设计
+                      <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px', marginRight:'10px' }} />
+                      秋刀鱼设计</a>
                   </span>
                   <span className="right">
                     1天前

@@ -251,4 +251,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+}
+
+.link > img {
+    border-radius: 50%;
+}
+
+.right {
+    line-height: 50px;
+    font-size: 12px;
+    color: #bbb;
 }
