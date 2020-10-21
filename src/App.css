@@ -150,7 +150,7 @@ img {
 .matter {
     margin: 20px 0;
     margin-bottom: 0px;
-    background: #999;
+    /* background: #999; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -164,6 +164,7 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
 .item {
     width: 210px;
     border-radius: 4px;
@@ -186,6 +187,11 @@ img {
     font-size: 14px;
     line-height: 20px;
     color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    width: 178px;
 }
 
 .type {
@@ -199,6 +205,7 @@ img {
     border-bottom: 1px solid #eee;
     padding: 11px 16px 13px;
     height: 75px;
+    cursor: pointer;
 }
 
 .icon {
@@ -266,9 +273,10 @@ img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.link > img {
+.link>img {
     border-radius: 50%;
 }
 
@@ -276,4 +284,9 @@ img {
     line-height: 50px;
     font-size: 12px;
     color: #bbb;
+}
+
+.row {
+    height: 60px;
+    width: 100%;
 }

@@ -2,15 +2,25 @@ import React, { Component } from 'react';
 import './App.css';
 import { Menu } from 'antd';
 import Banner from './Banner.js';
+import { Pagination } from 'antd';
 
 const { SubMenu } = Menu;
-const numbers = [{ url: './img/item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274 },
-{ url: './img/item6.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
-{ url: './img/item7.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
-{ url: './img/item8.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
-{ url: './img/item9.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 }];
+const numbers = [{ url: 'item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274, link: '阿文精英', right: '22小时前', left: 'item10.jpg' },
+{ url: 'item6.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155, link: 'YOUNGIKE', right: '21小时前', left: 'item11.jpg' },
+{ url: 'item7.jpg', title: '品牌IP升级—太空APU', type: '平面-吉祥物', eye: '7838', number: 24, praise: 326, link: '一万同学', right: '1天前', left: 'item12.jpg' },
+{ url: 'item8.jpg', title: '星期米荣获2020 Pentawards包装设计大奖', type: '平面-包装', eye: '4581', number: 30, praise: 362, link: '柏星龙', right: '1天前', left: 'item13.jpg' },
+{ url: 'item9.jpg', title: '【创意周报】十月 - 第三周', type: '特别企划', link: '站酷海洛', right: '推广', left: 'item14.jpg' }];
 const list = [1, 2, 3, 4, 5];
 export default class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
+  link() {
+    this.props.history.push("https://www.zcool.com.cn/work/ZNDgzMjM0ODQ=.html")
+  }
 
   state = {
     current: 'mail',
@@ -53,6 +63,8 @@ export default class App extends Component {
           </Menu>
           <div className="login">登录 | 注册</div>
         </div>
+
+        {/* 图片轮播 && 导航内容显示 */}
         <div className="content">
           <Banner />
           <div className="photo">
@@ -67,41 +79,50 @@ export default class App extends Component {
             <p>最新发布</p>
           </div>
         </div>
+
+        {/* 细节展示 */}
         <div className="details">
           <div className="matter">
+
             {
-              list.map((list) =>
+              list && list.length > 0 && list.map((list) =>
                 <div className="box">
                   {
-                    numbers.map((url,title) =>
+                    numbers.map((number, index) =>
                       <div className="item">
-                        <img src={[require("./img/item1.jpg")]} alt="" />
+                        <img src={[require("./img/" + number.url)]}
+                          alt="" key={index}
+                          style={{ cursor: 'pointer' }}
+                          onClick={this.link.bind(this)} />
                         <div className="text">
-                          <p className="title">{numbers.title}</p>
-                          <p className="type">{numbers.type}</p>
+                          <p className="title" key={index}>{number.title}</p>
+                          <p className="type" key={index}>{number.type}</p>
                           <div className="icon">
-                            <p className="eye">{numbers.eye}</p>
-                            <p className="number">{numbers.number}</p>
-                            <p className="praise">{numbers.praise}</p>
+                            <p className="eye" key={index}>{number.eye}</p>
+                            <p className="number" key={index}>{number.number}</p>
+                            <p className="praise" key={index}>{number.praise}</p>
                           </div>
                         </div>
                         <div className="card-item">
                           <span className="left">
-                            <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link">
-                              <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
-                        秋刀鱼设计</a>
+                            <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link" key={index}>
+                              <img key="index" src={[require("./img/" + number.left)]} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+                              {number.link}</a>
                           </span>
-                          <span className="right">
-                            1天前
-                      </span>
+                          <span className="right" key="index">
+                            {number.right}
+                          </span>
                         </div>
                       </div>
                     )
                   }
-
                 </div>)
             }
 
+            <Pagination
+              defaultCurrent={1}
+              onChange={this.handleChange}
+              total={list.length} />
           </div>
         </div>
       </>

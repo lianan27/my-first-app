@@ -9,6 +9,7 @@
     "antd": "^4.7.0",
     "less": "^3.12.2",
     "nuka-carousel": "^4.7.1",
+    "rc-pagination": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
