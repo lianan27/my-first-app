@@ -142,25 +142,39 @@ img {
 }
 
 .details {
-    height: 1300px;
+    width: 100%;
     background-color: #f4f4f4;
+    position: absolute;
 }
 
 .matter {
-    width: 80%;
-    min-width: 1320px;
-    margin: 20px auto;
+    margin: 20px 0;
     margin-bottom: 0px;
     background: #999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    min-width: 1320px;
+    position: relative;
+    margin: 0 auto;
 }
 
+.box {
+    display: flex;
+    justify-content: space-between;
+}
 .item {
     width: 210px;
     border-radius: 4px;
     float: left;
     position: relative;
     background: #fff;
-    margin: 0 20px 20px 0;
+    margin: 0 0 20px 0;
+}
+
+.item:not(:last-child) {
+    margin-right: 20px;
 }
 
 .item>img {

@@ -4,6 +4,12 @@ import { Menu } from 'antd';
 import Banner from './Banner.js';
 
 const { SubMenu } = Menu;
+const numbers = [{ url: './img/item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274 },
+{ url: './img/item6.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
+{ url: './img/item7.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
+{ url: './img/item8.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 },
+{ url: './img/item9.jpg', title: 'THE FOUR SYMBOLS ④ 四象', type: '插画-插画习作', eye: '1.5w', number: 139, praise: 1155 }];
+const list = [1, 2, 3, 4, 5];
 export default class App extends Component {
 
   state = {
@@ -63,30 +69,39 @@ export default class App extends Component {
         </div>
         <div className="details">
           <div className="matter">
-            <div className="box">
-              <div className="item">
-                <img src={[require("./img/item1.jpg")]} alt="" />
-                <div className="text">
-                  <p className="title">THE MIST——Styleframe</p>
-                  <p className="type">三维-其他三维</p>
-                  <div className="icon">
-                    <p className="eye">1318</p>
-                    <p className="number">9</p>
-                    <p className="praise">66</p>
-                  </div>
-                </div>
-                <div className="card-item">
-                  <span className="left">
-                    <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link">
-                      <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px', marginRight:'10px' }} />
-                      秋刀鱼设计</a>
-                  </span>
-                  <span className="right">
-                    1天前
-                  </span>
-                </div>
-              </div>
-            </div>
+            {
+              list.map((list) =>
+                <div className="box">
+                  {
+                    numbers.map((url,title) =>
+                      <div className="item">
+                        <img src={[require("./img/item1.jpg")]} alt="" />
+                        <div className="text">
+                          <p className="title">{numbers.title}</p>
+                          <p className="type">{numbers.type}</p>
+                          <div className="icon">
+                            <p className="eye">{numbers.eye}</p>
+                            <p className="number">{numbers.number}</p>
+                            <p className="praise">{numbers.praise}</p>
+                          </div>
+                        </div>
+                        <div className="card-item">
+                          <span className="left">
+                            <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link">
+                              <img src={[require("./img/item1.jpg")]} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+                        秋刀鱼设计</a>
+                          </span>
+                          <span className="right">
+                            1天前
+                      </span>
+                        </div>
+                      </div>
+                    )
+                  }
+
+                </div>)
+            }
+
           </div>
         </div>
       </>
