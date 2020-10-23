@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Menu, Pagination, Popover, Button } from 'antd';
-import Banner from './Banner.js';
-import './popover.css'
+import { Menu, Pagination, Popover, Button, Carousel } from 'antd';
+import './popover.css';
 
 const { SubMenu } = Menu;
 const numbers = [{ url: 'item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274, link: '阿文精英', right: '22小时前', left: 'item10.jpg' },
@@ -98,7 +97,26 @@ export default class App extends Component {
 
         {/* 图片轮播 && 导航内容显示 */}
         <div className="content">
-          <Banner />
+          <Carousel autoplay>
+            <div>
+              <h3><img src={require("./img/slideshow1.png")} alt=""/>1</h3>
+            </div>
+            <div>
+              <h3><img src={require("./img/slideshow2.png")} alt=""/>2</h3>
+            </div>
+            <div>
+              <h3><img src={require("./img/slideshow3.png")} alt=""/>3</h3>
+            </div>
+            <div>
+              <h3><img src={require("./img/slideshow4.jpg")} alt=""/>4</h3>
+            </div>
+            <div>
+              <h3><img src={require("./img/slideshow5.png")} alt=""/>5</h3>
+            </div>
+            <div>
+              <h3><img src={require("./img/slideshow6.png")} alt=""/>6</h3>
+            </div>
+          </Carousel>
           <div className="photo">
             <img src={[require("./img/content1.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
             <img src={[require("./img/content2.jpg")]} alt="" onClick={() => { window.location.href = "https://www.zcool.com.cn" }} />
