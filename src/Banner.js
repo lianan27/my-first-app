@@ -12,6 +12,7 @@ export default class Banner extends React.Component {
         }
     }
     render() {
+
         return (
             <Carousel autoplay>
                 <img src={require('./img/slideshow1.png')} alt="logo" />
@@ -19,6 +20,7 @@ export default class Banner extends React.Component {
                 <img src={require('./img/slideshow3.png')} alt="logo" />
                 <img src={require('./img/slideshow4.jpg')} alt="logo" />
                 <img src={require('./img/slideshow5.png')} alt="logo" />
+                <img src={require('./img/slideshow6.png')} alt="logo" />
             </Carousel>
         )
     }

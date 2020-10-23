@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Menu } from 'antd';
+import { Menu, Pagination, Popover } from 'antd';
 import Banner from './Banner.js';
-import { Pagination } from 'antd';
 
 const { SubMenu } = Menu;
 const numbers = [{ url: 'item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274, link: '阿文精英', right: '22小时前', left: 'item10.jpg' },
@@ -12,7 +11,6 @@ const numbers = [{ url: 'item5.jpg', title: '现代北欧家装合集', type: '�
 { url: 'item9.jpg', title: '【创意周报】十月 - 第三周', type: '特别企划', link: '站酷海洛', right: '推广', left: 'item14.jpg' }];
 const list = [1, 2, 3, 4, 5];
 export default class App extends Component {
-
   constructor(props) {
     super(props)
     this.state = {}
@@ -33,8 +31,14 @@ export default class App extends Component {
 
   render() {
     const { current } = this.state;
+
+    const Content = (
+      <div>
+        Close
+      </div>
+    )
     return (
-      <>
+      <div>
         {/* 导航栏 */}
         <div className="header">
           <img src={[require("./img/站酷_logo.gif")]} alt="" className="logo" />
@@ -83,7 +87,6 @@ export default class App extends Component {
         {/* 细节展示 */}
         <div className="details">
           <div className="matter">
-
             {
               list && list.length > 0 && list.map((list) =>
                 <div className="box">
@@ -104,11 +107,17 @@ export default class App extends Component {
                           </div>
                         </div>
                         <div className="card-item">
-                          <span className="left">
+                          <Popover
+                            content={Content}
+                            title="Title"
+                            trigger="hover"
+                            className="left"
+                            placement="topLeft"
+                          >
                             <a href="https://saurydesign.zcool.com.cn" title="秋刀鱼设计" className="link" key={index}>
                               <img key="index" src={[require("./img/" + number.left)]} alt="" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
                               {number.link}</a>
-                          </span>
+                          </Popover>
                           <span className="right" key="index">
                             {number.right}
                           </span>
@@ -118,14 +127,14 @@ export default class App extends Component {
                   }
                 </div>)
             }
-
             <Pagination
               defaultCurrent={1}
+              defaultPageSize={50}
               onChange={this.handleChange}
               total={list.length} />
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
