@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Menu, Pagination, Popover } from 'antd';
+import { Menu, Pagination, Popover, Button } from 'antd';
 import Banner from './Banner.js';
+import './popover.css'
 
 const { SubMenu } = Menu;
 const numbers = [{ url: 'item5.jpg', title: '现代北欧家装合集', type: '空间-室内设计', eye: 8631, number: 101, praise: 274, link: '阿文精英', right: '22小时前', left: 'item10.jpg' },
@@ -33,8 +34,35 @@ export default class App extends Component {
     const { current } = this.state;
 
     const Content = (
-      <div>
-        Close
+      <div className="show">
+        {/* 作者信息部分 */}
+        <div className="top">
+          <div className="autor">
+            <img src={[require('./img/item5.jpg')]} alt=""></img>
+            <p>
+              <span>阿文精英</span>
+              <span>杭州 &nbsp; | &nbsp; 摄影师</span>
+            </p>
+          </div>
+          <Button>关注</Button>
+        </div>
+
+        {/* 作品展示部分 */}
+        <div className="middle">
+          <img src={[require('./img/item6.jpg')]} alt=""></img>
+          <img src={[require('./img/item7.jpg')]} alt=""></img>
+          <img src={[require('./img/item8.jpg')]} alt=""></img>
+        </div>
+
+        {/* 热度信息部分 */}
+        <div className="base">
+          <img src={[require("./img/hot.png")]} alt=""></img>
+          <span>123</span>
+          <img src={[require("./img/pic.png")]} alt=""></img>
+          <span>456</span>
+          <img src={[require("./img/中间人.png")]} alt=""></img>
+          <span>789</span>
+        </div>
       </div>
     )
     return (
@@ -109,7 +137,6 @@ export default class App extends Component {
                         <div className="card-item">
                           <Popover
                             content={Content}
-                            title="Title"
                             trigger="hover"
                             className="left"
                             placement="topLeft"
