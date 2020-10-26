@@ -12,7 +12,7 @@ p {
 }
 
 li {
-    list-style: none
+    list-style: none;
 }
 
 img {
@@ -20,80 +20,66 @@ img {
     border: none
 }
 
+/* 导航栏样式 */
 .header {
     background: #ffe300;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 60px;
+    padding: 0 30px;
     display: flex;
-    height: 28px;
+    align-items: center;
+    height: 56px;
     min-width: 1320px;
 }
 
-.header .logo {
+.logo {
     height: 20px;
     width: 120px;
-    margin-top: -8px;
-    margin-right: 100px;
+    margin-right: 60px;
 }
 
-.header .picture {
-    width: 66px;
-    height: 40px;
-    padding: 10px;
-}
-
-.picture:hover {
-    background-color: #282828;
-    color: #ffe300;
-    margin-top: -10px;
-}
-
-.header .picture .glass {
-    height: 20px;
-    width: 20px;
-}
-
-.header .menu {
-    width: 900px;
+.ant-menu-horizontal {
+    width: 70%;
     display: flex;
-    margin-top: -20px;
-    text-align: center;
+    justify-content: space-between;
+    background-color: #ffe300;
 }
 
-.header .menu .name {
-    width: 66px;
-    height: 40px;
-    padding: 10px;
+.ant-menu-horizontal {
+    border-bottom: 0px;
 }
 
-/* 鼠标移动上去改变颜色 */
-.name:hover {
-    background-color: #282828;
-    color: #ffe300;
-    margin-top: -10px;
+.ant-menu-submenu-title:hover {
+    width: 100%;
+    background: #282828;
+    color: white;
 }
 
-.ant-menu-item-group-title {
-    margin-left: 925px;
-    margin-top: 25px;
-    background: white;
-    width: 105px;
-    text-align: center;
-}
-
-
-.header .menu .meun_list {
-    height: 28px;
+.glass {
+    height: 100%;
+    width: 80px;
+    background-color: #ffe300;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.header .login {
-    margin-top: -10px;
+.glass:hover {
+    background-color: #282828;
 }
 
+.glass > img {
+    height: 20px;
+    width: 20px;
+}
+
+.login {
+    width: 95px;
+    margin-left: 20px;
+}
+
+
+/* 图片轮播 && 导航内容显示 */
 .content {
     width: 80%;
     min-width: 1320px;

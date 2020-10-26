@@ -69,52 +69,88 @@ export default class App extends Component {
         {/* 导航栏 */}
         <div className="header">
           <img src={[require("./img/站酷_logo.gif")]} alt="" className="logo" />
-          <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal" className="menu">
-            <Menu.Item className="name" key="mail">首页</Menu.Item>
-            <Menu.Item className="name">发现</Menu.Item>
-            <SubMenu className="name" key="mail" title="职位">
+          <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
+            <Menu.Item key="mail">首页</Menu.Item>
+            <SubMenu key="find" title="发现" className="items">
+              <Menu.ItemGroup title="平面"></Menu.ItemGroup>
+              <Menu.ItemGroup title="UI"></Menu.ItemGroup>
+              <Menu.ItemGroup title="插画"></Menu.ItemGroup>
+              <Menu.ItemGroup title="动漫"></Menu.ItemGroup>
+              <Menu.ItemGroup title="摄影"></Menu.ItemGroup>
+              <Menu.ItemGroup title="空间"></Menu.ItemGroup>
+              <Menu.ItemGroup title="精选作品"></Menu.ItemGroup>
+              <Menu.ItemGroup title="精选文章"></Menu.ItemGroup>
+              <Menu.ItemGroup title="精选表格"></Menu.ItemGroup>
             </SubMenu>
-            <SubMenu className="name" key="SubMenu" title="活动">
+            <SubMenu key="job" title="职位">
+              <Menu.ItemGroup title="职位"></Menu.ItemGroup>
+              <Menu.ItemGroup title="公司"></Menu.ItemGroup>
+              <Menu.ItemGroup title="+发布职位"></Menu.ItemGroup>
             </SubMenu>
-            <Menu.Item className="name">正版素材</Menu.Item>
-            <Menu.Item className="name">课程</Menu.Item>
-            <Menu.Item className="name">版权保护</Menu.Item>
-            <SubMenu key="SubMenu" className="name" title="•••">
+            <SubMenu key="action" title="活动">
+              <Menu.ItemGroup title="设计大赛"></Menu.ItemGroup>
+              <Menu.ItemGroup title="专题策划"></Menu.ItemGroup>
+              <Menu.ItemGroup title="线上活动"></Menu.ItemGroup>
+              <Menu.ItemGroup title="线下活动"></Menu.ItemGroup>
+              <Menu.ItemGroup title="学习音频"></Menu.ItemGroup>
+            </SubMenu>
+            <SubMenu key="front" title="正版素材">
+              <Menu.ItemGroup title="图片"></Menu.ItemGroup>
+              <Menu.ItemGroup title="视频"></Menu.ItemGroup>
+              <Menu.ItemGroup title="字体"></Menu.ItemGroup>
+              <Menu.ItemGroup title="音乐"></Menu.ItemGroup>
+              <Menu.ItemGroup title="创意专题"></Menu.ItemGroup>
+              <Menu.ItemGroup title="我要供图"></Menu.ItemGroup>
+            </SubMenu>
+            <SubMenu key="class" title="课程">
+              <Menu.ItemGroup title="会员专区"></Menu.ItemGroup>
+              <Menu.ItemGroup title="免费直播"></Menu.ItemGroup>
+              <Menu.ItemGroup title="正在热销"></Menu.ItemGroup>
+              <Menu.ItemGroup title="口碑好课"></Menu.ItemGroup>
+            </SubMenu>
+            <SubMenu key="protect" title="版权保护">
+              <Menu.ItemGroup title="著作权登记"></Menu.ItemGroup>
+              <Menu.ItemGroup title="区块链存证"></Menu.ItemGroup>
+              <Menu.ItemGroup title="维权服务"></Menu.ItemGroup>
+              <Menu.ItemGroup title="商标注册"></Menu.ItemGroup>
+            </SubMenu>
+            <SubMenu key="omit" title="•••">
               <Menu.ItemGroup title="设计师"></Menu.ItemGroup>
               <Menu.ItemGroup title="榜单"></Menu.ItemGroup>
-              <Menu.ItemGroup title="APP"></Menu.ItemGroup>
-              <Menu.ItemGroup title="字库"></Menu.ItemGroup>
+              <Menu.ItemGroup title="站酷APP"></Menu.ItemGroup>
+              <Menu.ItemGroup title="站酷字库"></Menu.ItemGroup>
             </SubMenu>
-            <div className="picture">
-              <img src={[require("./img/站酷_logo_05.gif")]} alt="" className="glass" />
-            </div>
-            <div className="picture">
-              <img src={[require("./img/站酷_logo_07.gif")]} alt="" className="glass" style={{ marginLeft: "0px" }} />
-            </div>
           </Menu>
-          <div className="login">登录 | 注册</div>
+          <div className="glass">
+            <img src={[require("./img/站酷_logo_05.gif")]} alt="" />
+          </div>
+          <div className="glass">
+            <img src={[require("./img/站酷_logo_07.gif")]} alt="" />
+          </div>
+
+          <div className="login">登录&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;注册</div>
         </div>
 
         {/* 图片轮播 && 导航内容显示 */}
         <div className="content">
           <Carousel autoplay>
             <div>
-              <h3><img src={require("./img/slideshow1.png")} alt=""/>1</h3>
+              <h3><img src={require("./img/slideshow1.png")} alt="" />1</h3>
             </div>
             <div>
-              <h3><img src={require("./img/slideshow2.png")} alt=""/>2</h3>
+              <h3><img src={require("./img/slideshow2.png")} alt="" />2</h3>
             </div>
             <div>
-              <h3><img src={require("./img/slideshow3.png")} alt=""/>3</h3>
+              <h3><img src={require("./img/slideshow3.png")} alt="" />3</h3>
             </div>
             <div>
-              <h3><img src={require("./img/slideshow4.jpg")} alt=""/>4</h3>
+              <h3><img src={require("./img/slideshow4.jpg")} alt="" />4</h3>
             </div>
             <div>
-              <h3><img src={require("./img/slideshow5.png")} alt=""/>5</h3>
+              <h3><img src={require("./img/slideshow5.png")} alt="" />5</h3>
             </div>
             <div>
-              <h3><img src={require("./img/slideshow6.png")} alt=""/>6</h3>
+              <h3><img src={require("./img/slideshow6.png")} alt="" />6</h3>
             </div>
           </Carousel>
           <div className="photo">
