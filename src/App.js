@@ -214,6 +214,33 @@ export default class App extends Component {
               onChange={this.handleChange}
               total={list.length} />
           </div>
+
+          {/* 商标展示 */}
+          <div className="footer">
+            <div className="footer-top">
+              <p>移动版</p>
+              <p>关于我们</p>
+              <p>用户协议</p>
+              <p>隐私政策</p>
+              <p>侵权申诉</p>
+              <p>企业服务</p>
+              <p>帮助中心</p>
+              <p>联系我们</p>
+              <p>中文</p>
+              <p>English</p>
+            </div>
+            <div className="footer-bottom">
+              <p>
+                京公网安备11010502000501号&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 广播电视节目制作经营许可证（京）字第06990号
+                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备11017824号&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP证130164号
+            </p>
+            <p>
+            营业执照&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;网上有害信息举报专区&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            不良信息举报电话：010-56538658&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;举报邮箱 jubao@zcool.com.cn&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+            联系电话：010-56538600
+            </p>
+            </div>
+          </div>
         </div>
       </div>
     );
